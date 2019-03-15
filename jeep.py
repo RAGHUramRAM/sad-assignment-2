@@ -189,7 +189,56 @@ class Jeep(object):
     def fill_up_tank(self):
         print("\nFuel tank filled up!")
         self.fuel_tank.level = 100
-        
+
+class Fuel:
+        def __init__(self, name):
+                self._observers = []
+                self._name = name
+                self._fill_up_tank= 0
+ 
+        def attach(self, observer):
+                if observer not in self._observers:
+                        self._observers.append(observer)
+        def detach(self, observer):
+                try:
+                        self._observers.remove(observer)
+                except ValueError:
+                        print("Observer is already not in the list of observers.")
+        def notify(self):
+                for observer in self._observers:
+                        observer.update(self)
+                 
+        @property
+        def fill_up_tank(self):
+            print("\nFuel tank filled up!")
+            return self.fuel_tank.level
+ 
+        @fill_up_tank.setter
+        def fill_up_tank(self, fill_up_tank):
+                self._fill_up_tank = fill_up_tank
+                self.notify()
+                 
+class TankMonitorCore:
+        def update(self, subject):
+                if subject._fill_up_tank < 10:
+                    print("TankMonitorCore says: {} has fuel {:.2f}l. Code Red!!! fill up the tank".format(subject._name, subject._fill_up_tank))
+                else:
+                    print("TankMonitorCore says: {} has fuel {:.2f}l. fuel is sufficient.".format(subject._name, subject._fill_up_tank))
+ 
+# Create a subject to be monitored
+case = Fuel("Fuel Tank")
+ 
+# Create observers
+tankMonitorCase = TankMonitorCore()
+tankMonitorCase = TankMonitorCore()
+ 
+# Attach the observers to the subject
+case.attach(tankMonitorCase)
+case.attach(tankMonitorCase)
+ 
+# Changing the temperature of the core, which invokes the notify() method of class Core, which in turn invokes the update() method of each observer.
+
+
         
 def main():
     jeepBuilder = JeepBuilder() # initializing the class
@@ -213,6 +262,8 @@ def main():
     car.drive()
     car.start()
     car.drive()
+    case.fill_up_tank = car.fuel_tank.level
 
 if __name__ == "__main__":
     main()
+
