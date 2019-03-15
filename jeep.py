@@ -230,16 +230,10 @@ case = Fuel("Fuel Tank")
  
 # Create observers
 tankMonitorCase = TankMonitorCore()
-tankMonitorCase = TankMonitorCore()
  
 # Attach the observers to the subject
 case.attach(tankMonitorCase)
-case.attach(tankMonitorCase)
- 
-# Changing the temperature of the core, which invokes the notify() method of class Core, which in turn invokes the update() method of each observer.
-
-
-        
+         
 def main():
     jeepBuilder = JeepBuilder() # initializing the class
    
