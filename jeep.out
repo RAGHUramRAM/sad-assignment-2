@@ -1,0 +1,79 @@
+Jeep
+body: SUV
+engine horsepower: 400
+tire size: 22'
+
+
+Starting...
+_HandBrakeLight: OFF
+_FogLampLight: OFF
+
+
+Drove 100km
+24.12l of fuel still left
+Drove 100km
+18.24l of fuel still left
+Drove 100km
+12.35l of fuel still left
+Drove 100km
+6.47l of fuel still left
+Drove 100km
+0.59l of fuel still left
+
+Switching ON fog lights...
+_HandBrakeLight: OFF
+_FogLampLight: ON
+
+Switching OFF fog lights...
+_HandBrakeLight: OFF
+_FogLampLight: OFF
+
+Parking...
+_HandBrakeLight: ON
+_FogLampLight: OFF
+
+Fuel tank filled up!
+
+
+Can't drive. The Engine is turned off!
+
+Starting...
+_HandBrakeLight: ON
+_FogLampLight: OFF
+
+
+Drove 100km
+94.12l of fuel still left
+Drove 100km
+88.24l of fuel still left
+Drove 100km
+82.35l of fuel still left
+Drove 100km
+76.47l of fuel still left
+Drove 100km
+70.59l of fuel still left
+Drove 100km
+64.71l of fuel still left
+Drove 100km
+58.82l of fuel still left
+Drove 100km
+52.94l of fuel still left
+Drove 100km
+47.06l of fuel still left
+Drove 100km
+41.18l of fuel still left
+Drove 100km
+35.29l of fuel still left
+Drove 100km
+29.41l of fuel still left
+Drove 100km
+23.53l of fuel still left
+Drove 100km
+17.65l of fuel still left
+Drove 100km
+11.76l of fuel still left
+Drove 100km
+5.88l of fuel still left
+Drove 100km
+0.00l of fuel still left
+TankMonitorCore says: Fuel Tank has fuel 0.00l. Code Red!!! fill up the tank
